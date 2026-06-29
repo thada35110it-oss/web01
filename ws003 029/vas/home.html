@@ -1,0 +1,38 @@
+<html>
+    <head>
+        
+
+    </head>
+    <body>
+        <h1>ผลเกรดเฉลี่ย JavaScript</h1>
+        <script src="script.js"></script>
+        <script>
+            let student = "สมพงษ์";
+            let midterm = 50;
+            let Final = 30;
+            let total = midterm + Final;
+            document.write("<h2>",student,"ได้คะแนนกลางภาค",midterm,"</h2>"); 
+            document.write("<h2>",student,"ได้คะแนนปลายภาค",Final,"</h2>"); 
+            document.write("<h2>",student,"ได้คะแนนรวม",total,"</h2>");
+            let  grade = null;
+            if(total>=80){
+                grade = "A";
+            }else if(total>=75){
+                grade = "B+";    
+            }else if(total>=70){
+                grade = "B";
+            }else if(total>=65){
+                grade = "C+";            
+            }else if(total>=60){
+                grade = "C";
+            }else if(total>=55){
+                grade = "D+";
+            }else if(total>=50){
+                grade = "D";  
+            }else if(total<=49){
+                grade = "F";
+            }      
+            document.write("<h3>เกรด: ",grade,"</h3>"); 
+        </script>
+    </body>
+</html>        

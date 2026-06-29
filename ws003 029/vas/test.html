@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+
+    <script>
+        let fruit = ["ลิ้นจี่","มะพร้าว","ฝรั่ง","กล้วย","มะม่วง"];
+        let price = [79,159,56,48,60];
+        let unit = ["โล","โล","โล","หวี","ลูก"];
+        let qty = [9,5,8,6,7];
+        let total = [];
+        let sum = 0;
+
+        // สร้างหัวตาราง
+        document.write("<table border='1' cellpadding='5'>");
+        document.write("<tr>");
+        document.write("<th>ลำดับ</th>");
+        document.write("<th>ผลไม้</th>");
+        document.write("<th>จำนวน</th>");
+        document.write("<th>หน่วย</th>");
+        document.write("<th>ราคาต่อหน่วย</th>");
+        document.write("<th>รวมเงิน</th>");
+        document.write("</tr>");
+
+        // แสดงข้อมูลในตาราง
+        for(let i=0; i<5; i++){
+            total[i] = price[i] * qty[i];
+            sum += total[i];
+
+            document.write("<tr>");
+            document.write("<td>"+(i+1)+"</td>");
+            document.write("<td>"+fruit[i]+"</td>");
+            document.write("<td>"+qty[i]+"</td>");
+            document.write("<td>"+unit[i]+"</td>");
+            document.write("<td>"+price[i]+" บาท</td>");
+            document.write("<td>"+total[i]+" บาท</td>");
+            document.write("</tr>");
+        }
+
+        // แถวรวมทั้งหมด
+        document.write("<tr>");
+        document.write("<td colspan='5' align='right'><b>รวมทั้งหมด</b></td>");
+        document.write("<td><b>"+sum+" บาท</b></td>");
+        document.write("</tr>");
+
+        document.write("</table>");
+    </script>
+
+</body>
+</html>
